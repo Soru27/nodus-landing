@@ -557,3 +557,26 @@ h3 {
     padding: .75rem 0;
   }
 }
+
+/* Brand logo (header) */
+.brand-logo { display: inline-flex; align-items: center; line-height: 0; gap: 0; }
+.brand-logo-img { display: block; height: 40px; width: auto; }
+.brand-logo-mobile { display: none; height: 32px; width: 32px; border-radius: 4px; }
+.brand-logo-fallback { display: none; }
+.brand-logo:hover { opacity: 0.9; }
+
+/* Footer logo */
+.footer-logo-img { height: 38px; width: auto; display: block; margin: 0 auto 0.5rem; opacity: 0.95; }
+
+/* Mobile logo swap: wordmark off, mark on (compact header) */
+@media (max-width: 639px) {
+  .brand-logo-desktop { display: none; }
+  .brand-logo-mobile { display: block; }
+  .footer-logo-img { height: 32px; }
+}
+
+/* If image fails to load, fallback shows */
+.brand-logo-img[alt]:after {
+  content: attr(alt);
+  display: none;
+}
