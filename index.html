@@ -20,16 +20,19 @@
     <div class="container header-row">
       <a href="#" class="brand brand-logo" aria-label="NODUS Intelligence">
         <img src="assets/nodus-logo-wordmark.jpeg" alt="NODUS Intelligence" class="brand-logo-img brand-logo-desktop" loading="eager" decoding="sync" width="170" height="40">
-        <img src="assets/nodus-logo-mark.jpeg" alt="NODUS" class="brand-logo-img brand-logo-mobile" loading="eager" decoding="sync" width="36" height="36">
-        <span class="brand-logo-fallback">
-          <span class="brand-mark">NODUS</span> <span class="brand-sub">Intelligence</span>
+        <span class="brand-mobile-pair">
+          <img src="assets/nodus-logo-mark.jpeg" alt="" class="brand-logo-img brand-logo-mobile" loading="eager" decoding="sync" width="32" height="32" aria-hidden="true">
+          <span class="brand-mobile-text">
+            <span class="brand-mark">NODUS</span>
+            <span class="brand-sub">Intelligence</span>
+          </span>
         </span>
       </a>
       <nav class="header-nav">
         <a href="#numeri" class="nav-link">Numeri</a>
         <a href="#esempio" class="nav-link">Esempio</a>
         <a href="#come-funziona" class="nav-link">Come funziona</a>
-        <a href="#contatto" class="cta-btn cta-btn--nav">Sample</a>
+        <a href="#contatto" class="cta-btn cta-btn--nav">Estratto</a>
       </nav>
     </div>
   </header>
@@ -38,13 +41,13 @@
   <section class="hero">
     <div class="container hero-inner">
       <p class="section-tag section-tag--light">ICT Pre-sales intelligence &middot; PA Lombardia &middot; Fase pilota</p>
-      <h1>Scopri quali enti lombardi comprano servizi ICT &mdash; e dove iniziare a vendere</h1>
-      <p class="hero-sub">NODUS organizza dati pubblici ANAC in un report leggibile per chi vende software, cloud, infrastruttura, cybersecurity o servizi IT alla PA. Non &egrave; un portale gare: &egrave; uno strumento per capire dove concentrare il lavoro commerciale.</p>
+      <h1>Prima di inseguire gare, capisci quali enti comprano ICT.</h1>
+      <p class="hero-sub">NODUS organizza dati pubblici ANAC/AVCP in una shortlist leggibile per chi vende software, cloud, cybersecurity e servizi IT alla PA lombarda. Non &egrave; un portale gare: &egrave; una mappa per decidere dove concentrare il lavoro commerciale.</p>
       <div class="hero-actions">
         <a href="#contatto" class="cta-btn cta-btn--primary">Richiedi 10 opportunit&agrave; della tua zona</a>
         <a href="#come-funziona" class="cta-btn cta-btn--ghost">Vedi come funziona &darr;</a>
       </div>
-      <p class="hero-note">Base storica ANAC/AVCP per i pattern &middot; Layer TED EU recente in integrazione &middot; Nessun obbligo</p>
+      <p class="hero-note">Base storica ANAC/AVCP per i pattern &middot; Layer TED EU recente in integrazione &middot; Nessun monitoraggio in tempo reale</p>
     </div>
   </section>
 
@@ -60,7 +63,7 @@
           <div class="pain-icon">&#128269;</div>
           <div>
             <strong>Dispersi su decine di fonti</strong>
-            <p>53 enti in 8 province. Cercarli uno per uno costa ore di lavoro.</p>
+            <p>53 enti in 12 province lombarde. Cercarli uno per uno costa ore di lavoro.</p>
           </div>
         </div>
         <div class="pain-card">
@@ -213,6 +216,22 @@
       </details>
 
       <p class="preview-note">L'estratto reale include anche filtro per CPV, fascia di importo, anno, ente e un breve commento operativo dove utile.</p>
+
+      <!-- REAL OPPORTUNITY PROOF -->
+      <div class="proof-card">
+        <div class="proof-card-tag">Esempio reale di opportunit&agrave;</div>
+        <h3 class="proof-card-title">Manutenzione hardware e software &mdash; ASST Mantova</h3>
+        <div class="proof-card-meta">
+          <span><strong>Provincia:</strong> MN</span>
+          <span><strong>Categoria:</strong> SOFTWARE_SVILUPPO</span>
+          <span><strong>Importo:</strong> ~138K EUR</span>
+          <span><strong>Score NODUS v2.0:</strong> 88 / 100</span>
+          <span><strong>Anno:</strong> 2022</span>
+        </div>
+        <p class="proof-card-why"><strong>Perch&eacute; guardarla:</strong> score elite, importo sopra mediana ICT regionale, categoria diretta NODUS taxonomy, pattern stabile (142 bandi simili nella stessa provincia).</p>
+        <p class="proof-card-source">Estratto da <code>sample_opportunity_explanation.md</code> &middot; generato da <code>scripts/ai_opportunity_explainer.py --top-bando 1 --provincia MN</code> &middot; deterministic, DB-grounded.</p>
+        <p class="proof-card-limits"><strong>Limiti dichiarati:</strong> dato ANAC storico (2022) &mdash; il deal potrebbe essere chiuso. Aggiudicatario non disponibile in DB.</p>
+      </div>
     </div>
   </section>
 
@@ -309,8 +328,8 @@
         </div>
       </div>
       <div class="ai-mini">
-        <strong>AI usata dove riduce errori, non dove inventa dati</strong>
-        <p>I conteggi e i punteggi partono dal database. Usiamo moduli AI-assisted per spiegare priorit&agrave;, generare brief e controllare che i messaggi non contengano claim non verificati. Niente "AI che trova clienti da sola": NODUS resta database-first e auditabile.</p>
+        <strong>AI come trust layer, non come promessa principale</strong>
+        <p>Moduli AI-assisted spiegano priorit&agrave; e controllano la coerenza dei claim prima dell'invio. Conteggi e punteggi restano <em>database-first</em>: ogni numero parte da una query SQL verificabile. Nessuna automazione cieca, nessuna "AI che trova clienti da sola".</p>
       </div>
       <p class="transparency-note">Meglio un limite chiaro che un claim non verificato.</p>
     </div>

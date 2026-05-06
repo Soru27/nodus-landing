@@ -580,3 +580,106 @@ h3 {
   content: attr(alt);
   display: none;
 }
+
+/* Brand mobile pair (mark + text inline) */
+.brand-mobile-pair {
+  display: none;
+  align-items: center;
+  gap: .55rem;
+}
+.brand-mobile-text {
+  display: inline-flex;
+  flex-direction: column;
+  line-height: 1.05;
+}
+.brand-mobile-text .brand-mark {
+  font-size: 1rem;
+  font-weight: 800;
+  color: var(--c-ink);
+  letter-spacing: -.02em;
+}
+.brand-mobile-text .brand-sub {
+  font-size: .72rem;
+  font-weight: 400;
+  color: var(--c-ink-light);
+  margin-top: 1px;
+}
+
+@media (max-width: 639px) {
+  .brand-logo-desktop { display: none; }
+  .brand-mobile-pair { display: inline-flex; }
+}
+
+/* Real opportunity proof card */
+.proof-card {
+  margin-top: 2rem;
+  background: #fff;
+  border: 1px solid #d6dbe6;
+  border-left: 4px solid var(--c-accent);
+  border-radius: 8px;
+  padding: 1.25rem 1.5rem;
+  box-shadow: 0 2px 8px rgba(15, 23, 41, 0.05);
+}
+.proof-card-tag {
+  display: inline-block;
+  font-size: .7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  color: var(--c-accent);
+  background: var(--c-accent-soft);
+  padding: .2rem .6rem;
+  border-radius: 4px;
+  margin-bottom: .75rem;
+}
+.proof-card-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--c-ink);
+  margin-bottom: .5rem;
+}
+.proof-card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  font-size: .85rem;
+  color: var(--c-ink-mid);
+  margin-bottom: .75rem;
+  border-bottom: 1px solid #f0f2f7;
+  padding-bottom: .75rem;
+}
+.proof-card-meta span strong { color: var(--c-ink); margin-right: .25rem; }
+.proof-card-why {
+  font-size: .9rem;
+  color: var(--c-ink-mid);
+  line-height: 1.55;
+  margin-bottom: .65rem;
+}
+.proof-card-source {
+  font-size: .78rem;
+  color: var(--c-ink-light);
+  font-style: italic;
+  margin-bottom: .4rem;
+}
+.proof-card-source code {
+  background: #f3f4f6;
+  padding: 1px 4px;
+  border-radius: 3px;
+  font-size: .85em;
+  color: var(--c-accent);
+  font-style: normal;
+}
+.proof-card-limits {
+  font-size: .78rem;
+  color: var(--c-warn);
+  background: var(--c-warn-bg);
+  border-radius: 4px;
+  padding: .5rem .75rem;
+  margin: 0;
+}
+.proof-card-limits strong { color: var(--c-warn); }
+
+@media (max-width: 639px) {
+  .proof-card-meta { gap: .5rem 1rem; font-size: .8rem; }
+  .proof-card { padding: 1rem 1.1rem; }
+}
