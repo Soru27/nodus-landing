@@ -30,7 +30,7 @@
       </a>
       <nav class="header-nav">
         <a href="#numeri" class="nav-link">Numeri</a>
-        <a href="#esempio" class="nav-link">Esempio</a>
+        <a href="#proof" class="nav-link">Output</a>
         <a href="#come-funziona" class="nav-link">Come funziona</a>
         <a href="#contatto" class="cta-btn cta-btn--nav">Estratto</a>
       </nav>
@@ -232,6 +232,40 @@
         <p class="proof-card-source">Estratto da <code>sample_opportunity_explanation.md</code> &middot; generato da <code>scripts/ai_opportunity_explainer.py --top-bando 1 --provincia MN</code> &middot; deterministic, DB-grounded.</p>
         <p class="proof-card-limits"><strong>Limiti dichiarati:</strong> dato ANAC storico (2022) &mdash; il deal potrebbe essere chiuso. Aggiudicatario non disponibile in DB.</p>
       </div>
+    </div>
+  </section>
+
+  <!-- VISUAL PROOF -->
+  <section class="section-white" id="proof">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag">Output reale</p>
+        <h2>Guarda cosa produce NODUS, non solo cosa promette</h2>
+        <p class="section-desc">Due viste reali generate dal sistema: una shortlist scored su tre province, e un opportunity explainer su un singolo bando. Tutti i numeri partono da query SQL su dati pubblici ANAC/AVCP.</p>
+      </div>
+      <div class="proof-screens">
+        <figure class="proof-screen">
+          <a href="assets/proof/proof-report-preview.png" target="_blank" rel="noopener">
+            <img src="assets/proof/proof-report-preview.png" alt="Preview shortlist NODUS — 3 province lombarde" class="proof-screen-img" loading="lazy" width="1200" height="900">
+          </a>
+          <figcaption>
+            <strong>Report Lombardia ICT &mdash; preview shortlist</strong>
+            <span>Snapshot DB: 55.278 bandi ANAC, 1.847 ICT scored Lombardia, 412 hot, 129 elite, 53 enti, 12 province. Tre province (MN/CR/BG) a confronto.</span>
+            <span class="proof-source">Generato da <code>scripts/export_public_metrics.py</code> &middot; counts da query SQL su <code>bando</code>, <code>score_log</code>, <code>ente</code>, <code>bando_ted</code>.</span>
+          </figcaption>
+        </figure>
+        <figure class="proof-screen">
+          <a href="assets/proof/proof-opportunity-explainer.png" target="_blank" rel="noopener">
+            <img src="assets/proof/proof-opportunity-explainer.png" alt="Opportunity explainer NODUS — ASST Mantova score 88/100" class="proof-screen-img" loading="lazy" width="1200" height="900">
+          </a>
+          <figcaption>
+            <strong>Opportunity Explainer &mdash; ASST Mantova</strong>
+            <span>Categoria SOFTWARE_SVILUPPO, importo ~138K EUR, score 88/100, 142 bandi peer in MN. Spiegazione generata da modulo deterministic DB-grounded.</span>
+            <span class="proof-source">Generato da <code>scripts/ai_opportunity_explainer.py --top-bando 1 --provincia MN</code> &middot; nessuna chiamata LLM in produzione.</span>
+          </figcaption>
+        </figure>
+      </div>
+      <p class="proof-note">Preview da output reale NODUS. Dato storico ANAC/AVCP, non monitoraggio in tempo reale. Layer TED EU recente in integrazione, non monitoraggio completo.</p>
     </div>
   </section>
 
