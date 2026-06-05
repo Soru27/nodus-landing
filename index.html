@@ -154,6 +154,7 @@
         </div>
       </div>
       <p class="stats-note">Numeri verificati dal database NODUS &middot; ultimo aggiornamento <strong id="snapshot-date">2026-05-06</strong> &middot; fonte: ANAC/AVCP storico (99% record &le; 2022) + 48 notice TED EU recenti (gennaio 2026, integrazione in corso).</p>
+      <p class="stats-note stats-note--signal"><strong>Nuovo segnale:</strong> NODUS ora mappa anche gli affidamenti diretti procedurali ICT (1.642 bandi Lombardia, 88,9% del corpus ICT scored).</p>
     </div>
   </section>
 
@@ -266,6 +267,41 @@
         </figure>
       </div>
       <p class="proof-note">Preview da output reale NODUS. Dato storico ANAC/AVCP, non monitoraggio in tempo reale. Layer TED EU recente in integrazione, non monitoraggio completo.</p>
+      <p class="proof-note proof-note--signal"><strong>Sample direct-award:</strong> 1.642 affidamenti diretti ICT Lombardia. Mappa per provincia, categoria, ente. Storico, non monitoring live.</p>
+    </div>
+  </section>
+
+  <!-- NUOVO SEGNALE: AFFIDAMENTI DIRETTI -->
+  <section class="section-light" id="affidamenti-diretti">
+    <div class="container">
+      <div class="section-head">
+        <p class="section-tag">Nuovo segnale</p>
+        <h2>Affidamenti diretti ICT &mdash; mappati</h2>
+        <p class="section-desc">Una quota molto alta della spesa ICT lombarda passa per procedure di affidamento diretto, non per gare aperte. NODUS ora le isola e le rende leggibili per chi vende ICT.</p>
+      </div>
+      <div class="direct-award-stats">
+        <div class="direct-award-stat">
+          <div class="direct-award-num">1.642</div>
+          <div class="direct-award-lbl">Bandi ICT Lombardia identificati come affidamenti diretti procedurali (codici 23 / 26 / 17 ANAC)</div>
+        </div>
+        <div class="direct-award-stat">
+          <div class="direct-award-num">88,9%</div>
+          <div class="direct-award-lbl">Quota sul corpus ICT scored (1.642 / 1.847)</div>
+        </div>
+        <div class="direct-award-stat">
+          <div class="direct-award-num">1.600 EUR</div>
+          <div class="direct-award-lbl">Importo mediano degli affidamenti diretti ICT mappati</div>
+        </div>
+      </div>
+      <ul class="direct-award-list">
+        <li><strong>Fonte:</strong> campo <code>tipo_procedura</code> ANAC/AVCP storico.</li>
+        <li><strong>Top ente per volume:</strong> Universit&agrave; degli Studi di Brescia.</li>
+        <li><strong>Top categoria ICT:</strong> SOFTWARE_SVILUPPO.</li>
+      </ul>
+      <div class="direct-award-caveat">
+        <p><strong>Trasparenza.</strong> Dato storico (ANAC &le; 2022, 99% dei record). Non sappiamo chi ha vinto questi affidamenti &mdash; l'identit&agrave; del fornitore richiede integrazione BDNCP, ancora pianificata.</p>
+        <p>Non sostituisce Telemat / Cerved per il monitoring live. NODUS resta in fase pilota assistita.</p>
+      </div>
     </div>
   </section>
 
