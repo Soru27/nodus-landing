@@ -426,6 +426,29 @@ h3 {
   font-style: italic;
 }
 
+.preview-scroll-hint {
+  display: none;
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0.5rem 0 0.25rem;
+  font-style: italic;
+}
+
+.preview-legend {
+  font-size: 0.8rem;
+  color: #6b7280;
+  margin: 0.4rem 0 0;
+  line-height: 1.45;
+}
+.preview-legend strong {
+  color: #4338ca;
+  font-weight: 600;
+}
+
+@media (max-width: 639px) {
+  .preview-scroll-hint { display: block; }
+}
+
 /* AI disclosure mini */
 .ai-mini {
   background: #f9fafb;
@@ -670,14 +693,16 @@ h3 {
   font-style: normal;
 }
 .proof-card-limits {
-  font-size: .78rem;
-  color: var(--c-warn);
-  background: var(--c-warn-bg);
+  font-size: .82rem;
+  color: var(--c-ink-mid);
+  background: #f3f4f6;
+  border-left: 3px solid var(--c-accent);
   border-radius: 4px;
-  padding: .5rem .75rem;
+  padding: .6rem .85rem;
   margin: 0;
+  line-height: 1.5;
 }
-.proof-card-limits strong { color: var(--c-warn); }
+.proof-card-limits strong { color: var(--c-accent); }
 
 @media (max-width: 639px) {
   .proof-card-meta { gap: .5rem 1rem; font-size: .8rem; }
@@ -789,25 +814,13 @@ h3 {
 .direct-award-lbl {
   font-size: .85rem; color: var(--c-ink-mid); line-height: 1.45;
 }
-.direct-award-list {
-  list-style: none; padding: 0; margin: 1.25rem 0 0;
-  font-size: .9rem; color: var(--c-ink-mid); line-height: 1.6;
+.direct-award-note {
+  margin-top: 1.25rem;
+  font-size: .85rem;
+  color: var(--c-ink-light);
+  line-height: 1.55;
+  text-align: center;
 }
-.direct-award-list li { margin-bottom: .3rem; }
-.direct-award-list code {
-  background: #f3f4f6; padding: 1px 5px; border-radius: 3px;
-  font-size: .85em; color: var(--c-accent);
-}
-.direct-award-caveat {
-  margin-top: 1.25rem; padding: .9rem 1.1rem;
-  background: var(--c-warn-bg);
-  border-left: 3px solid var(--c-warn);
-  border-radius: 0 var(--radius) var(--radius) 0;
-  font-size: .85rem; color: var(--c-ink-mid); line-height: 1.55;
-}
-.direct-award-caveat p { margin: 0 0 .4rem; }
-.direct-award-caveat p:last-child { margin-bottom: 0; }
-.direct-award-caveat strong { color: var(--c-warn); }
 
 @media (min-width: 768px) {
   .direct-award-stats { grid-template-columns: repeat(3, 1fr); }
